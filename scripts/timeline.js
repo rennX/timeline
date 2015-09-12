@@ -33,9 +33,6 @@ $(document).ready(function(){
 	var m = {"top":20, "right":15, "bottom":15, "left":120}, //margins
 		w = 960 - m.right - m.left, //width
 		h = 500 - m.top - m.bottom,
-	// var m = [20, 15, 15, 120], //margins (top right bottom left)
-	// 	w = 960 - m.righ - m.left, //width
-	// 	h = 500 - m.top - m.bottom,
 		miniHeight = laneLength * 12 + 50,
 		mainHeight = h - miniHeight - 50;
 
