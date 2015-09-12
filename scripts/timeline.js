@@ -30,9 +30,12 @@ $(document).ready(function(){
 		timeBegin = 0,
 		timeEnd = 2000;
 
-	var m = [20, 15, 15, 120], //top right bottom left
-		w = 960 - m[1] - m[3],
-		h = 500 - m[0] - m[2],
+	var m = {"top":20, "right":15, "bottom":15, "left":120}, //margins
+		w = 960 - m.right - m.left, //width
+		h = 500 - m.top - m.bottom,
+	// var m = [20, 15, 15, 120], //margins (top right bottom left)
+	// 	w = 960 - m.righ - m.left, //width
+	// 	h = 500 - m.top - m.bottom,
 		miniHeight = laneLength * 12 + 50,
 		mainHeight = h - miniHeight - 50;
 
@@ -51,8 +54,9 @@ $(document).ready(function(){
 
 	var chart = d3.select("#timeline")
 				.append("svg")
-				.attr("width", w + m[1] + m[3])
-				.attr("height", h + m[0] + m[2])
+				.attr("width", w + m.right
+	 + m.left)
+				.attr("height", h + m.top + m.bottom)
 				.attr("class", "chart");
 
 	chart.append("defs").append("clipPath")
@@ -62,13 +66,13 @@ $(document).ready(function(){
 		.attr("height", mainHeight);
 
 	var main = chart.append("g")
-				.attr("transform", "translate(" + m[3] + "," + m[0] + ")")
+				.attr("transform", "translate(" + m.left + "," + m.top + ")")
 				.attr("width", w)
 				.attr("height", mainHeight)
 				.attr("class", "main");
 
 	var mini = chart.append("g")
-				.attr("transform", "translate(" + m[3] + "," + (mainHeight + m[0]) + ")")
+				.attr("transform", "translate(" + m.left + "," + (mainHeight + m.top) + ")")
 				.attr("width", w)
 				.attr("height", miniHeight)
 				.attr("class", "mini");
@@ -77,7 +81,8 @@ $(document).ready(function(){
 	main.append("g").selectAll(".laneLines")
 		.data(items)
 		.enter().append("line")
-		.attr("x1", m[1])
+		.attr("x1", m.right
+)
 		.attr("y1", function(d) {return y1(d.lane);})
 		.attr("x2", w)
 		.attr("y2", function(d) {return y1(d.lane);})
@@ -87,7 +92,8 @@ $(document).ready(function(){
 		.data(lanes)
 		.enter().append("text")
 		.text(function(d) {return d;})
-		.attr("x", -m[1])
+		.attr("x", -m.right
+)
 		.attr("y", function(d, i) {return y1(i + .5);})
 		.attr("dy", ".5ex")
 		.attr("text-anchor", "end")
@@ -97,7 +103,8 @@ $(document).ready(function(){
 	mini.append("g").selectAll(".laneLines")
 		.data(items)
 		.enter().append("line")
-		.attr("x1", m[1])
+		.attr("x1", m.right
+)
 		.attr("y1", function(d) {return y2(d.lane);})
 		.attr("x2", w)
 		.attr("y2", function(d) {return y2(d.lane);})
@@ -107,7 +114,8 @@ $(document).ready(function(){
 		.data(lanes)
 		.enter().append("text")
 		.text(function(d) {return d;})
-		.attr("x", -m[1])
+		.attr("x", -m.right
+)
 		.attr("y", function(d, i) {return y2(i + .5);})
 		.attr("dy", ".5ex")
 		.attr("text-anchor", "end")
