@@ -49,7 +49,7 @@ $(document).ready(function(){
 			.domain([0, laneLength])
 			.range([0, miniHeight]);
 
-	var chart = d3.select("body")
+	var chart = d3.select("#timeline")
 				.append("svg")
 				.attr("width", w + m[1] + m[3])
 				.attr("height", h + m[0] + m[2])
