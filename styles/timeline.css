@@ -1,3 +1,7 @@
+body {
+	background-color: black;
+}
+
 .chart {
 	shape-rendering: crispEdges;
 	background-color: black;
@@ -31,7 +35,7 @@
 }
 
 .miniItem3 {
-	fill: darksalmon;
+	fill: darkolivegreen;
 	fill-opacity: .7;
 	stroke-width: 6;	
 }
@@ -43,7 +47,7 @@
 }
 
 .miniItem5 {
-	fill: darksalmon;
+	fill: darkolivegreen;
 	fill-opacity: .7;
 	stroke-width: 6;	
 }
@@ -55,7 +59,7 @@
 }
 
 .miniItem7 {
-	fill: darksalmon;
+	fill: darkolivegreen;
 	fill-opacity: .7;
 	stroke-width: 6;	
 }
@@ -67,7 +71,7 @@
 }
 
 .miniItem9 {
-	fill: darksalmon;
+	fill: darkolivegreen;
 	fill-opacity: .7;
 	stroke-width: 6;	
 }
