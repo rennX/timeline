@@ -1,13 +1,16 @@
 .chart {
 	shape-rendering: crispEdges;
+	background-color: black;
 }
 
 .mini text {
-	font: 9px sans-serif;	
+	font: 9px sans-serif;
+	fill: white;
 }
 
 .main text {
 	font: 12px sans-serif;	
+	fill: white;
 }
 
 .miniItem0 {
@@ -22,7 +25,55 @@
 }
 
 .miniItem2 {
-	fill: slategray;
+	fill: darksalmon;
+	fill-opacity: .7;
+	stroke-width: 6;	
+}
+
+.miniItem3 {
+	fill: darksalmon;
+	fill-opacity: .7;
+	stroke-width: 6;	
+}
+
+.miniItem4{
+	fill: darksalmon;
+	fill-opacity: .7;
+	stroke-width: 6;	
+}
+
+.miniItem5 {
+	fill: darksalmon;
+	fill-opacity: .7;
+	stroke-width: 6;	
+}
+
+.miniItem6 {
+	fill: darksalmon;
+	fill-opacity: .7;
+	stroke-width: 6;	
+}
+
+.miniItem7 {
+	fill: darksalmon;
+	fill-opacity: .7;
+	stroke-width: 6;	
+}
+
+.miniItem8 {
+	fill: darksalmon;
+	fill-opacity: .7;
+	stroke-width: 6;	
+}
+
+.miniItem9 {
+	fill: darksalmon;
+	fill-opacity: .7;
+	stroke-width: 6;	
+}
+
+.miniItem10 {
+	fill: darksalmon;
 	fill-opacity: .7;
 	stroke-width: 6;	
 }
